@@ -1,8 +1,0 @@
-- News
-- Bio
-- Gigs
-- Media
-- Equipement
-- Contact
-
-- Social Media
