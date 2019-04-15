@@ -1,0 +1,53 @@
+body {
+	padding: 10px;
+	border: 1px dashed #fff;
+}
+
+.period-range {
+    font-size: 16pt;
+    text-align: center;
+}
+
+.nav-button {
+	align-self: center;
+}
+
+th.column-label {
+	background-color: #4F3623;
+}
+
+h1, 
+#month-tab,
+#agenda-tab,
+#nav-today,
+#subscribe-link,
+#timezone {
+	display: none;
+}
+
+.view-month {
+	background-color: #19110B !important;
+	color: #fff;
+}
+
+.item-content.event-singleday {
+	/*background-color: #D6AF8C;*/
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 5px;
+	border-radius: 12px;
+}
+
+.item-content.event-singleday:hover {
+    background-color: #D6AF8C;
+}
+
+.event-link {
+	text-decoration-line: none;
+	color: #fff;
+	font-size: 10pt;
+}
+
+.event-time {
+	display: none;
+}
