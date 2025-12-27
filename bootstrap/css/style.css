@@ -30,6 +30,9 @@ header {
 
 header img {
 	margin: 0;
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 footer .footer-above, footer .footer-below {
@@ -105,4 +108,68 @@ section {
 .navbar-custom .navbar-toggle:focus, .navbar-custom .navbar-toggle:hover {
     background-color: #D6AF8C;
     border-color: #D6AF8C;
+}
+
+/* Image Responsiveness */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Divider images */
+.divider-img {
+	max-width: 300px;
+	margin: 20px auto;
+}
+
+/* Portfolio images */
+.portfolio-item img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin-bottom: 15px;
+}
+
+/* App images */
+.app-image-container {
+	margin-bottom: 40px;
+	padding: 15px;
+}
+
+.app-image {
+	max-width: 400px;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+
+/* Video containers */
+.video-container {
+	margin-bottom: 30px;
+	padding: 0 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.divider-img {
+		max-width: 200px;
+	}
+	
+	.app-image {
+		max-width: 300px;
+	}
+	
+	.portfolio-item {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 480px) {
+	.divider-img {
+		max-width: 150px;
+	}
+	
+	.app-image {
+		max-width: 250px;
+	}
 }

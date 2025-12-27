@@ -1,0 +1,47 @@
+name: 🚀 Deploy to FTP
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: 📥 Checkout code
+              uses: actions/checkout@v3
+
+            - name: 📦 Install Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 20
+
+            - name: 📐 Install dependencies
+              run: npm install
+
+            - name: 🛠 Build site (compile LESS, minify CSS/JS)
+              run: npx gulp
+
+            - name: 📤 Deploy via FTP
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+              with:
+                  server: ${{ secrets.FTP_SERVER }}
+                  username: ${{ secrets.FTP_USERNAME }}
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  local-dir: ./
+                  server-dir: /
+                  exclude: |
+                      **/.git*
+                      **/.git*/**
+                      **/node_modules/**
+                      **/.github/**
+                      **/bootstrap/**
+                      **/less/**
+                      **/gulpfile.js
+                      **/package.json
+                      **/package-lock.json
+                      **/README.md
+                      **/LICENSE
+                      **/license.txt
